@@ -1,0 +1,7 @@
+C:\Work\LearningManagementSystem\LMS.Data.Repository\obj\Debug\LMS.Data.Repository.csprojResolveAssemblyReference.cache
+C:\Work\LearningManagementSystem\LMS.Data.Repository\bin\Debug\LMS.Data.Repository.dll
+C:\Work\LearningManagementSystem\LMS.Data.Repository\bin\Debug\LMS.Data.Repository.pdb
+C:\Work\LearningManagementSystem\LMS.Data.Repository\obj\Debug\LMS.Data.Repository.dll
+C:\Work\LearningManagementSystem\LMS.Data.Repository\obj\Debug\LMS.Data.Repository.pdb
+C:\Work\LearningManagementSystem\LMS.Web.UI\bin\LMS.Data.Repository.dll
+C:\Work\LearningManagementSystem\LMS.Web.UI\bin\LMS.Data.Repository.pdb

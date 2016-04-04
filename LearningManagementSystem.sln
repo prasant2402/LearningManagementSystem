@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LMS.Web.UI", "LMS.Web.UI\LMS.Web.UI.csproj", "{DD8BCBDF-ECED-4AEC-879E-988717C66A6D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LMS.Data.Repository", "LMS.Data.Repository\LMS.Data.Repository.csproj", "{ACA9F5AB-6715-4740-AC44-20BC786D798E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LMS.Data.BL", "LMS.Data.BL\LMS.Data.BL.csproj", "{70A240AD-24D8-40EF-8B6D-6E3E08746FD9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DD8BCBDF-ECED-4AEC-879E-988717C66A6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD8BCBDF-ECED-4AEC-879E-988717C66A6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD8BCBDF-ECED-4AEC-879E-988717C66A6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD8BCBDF-ECED-4AEC-879E-988717C66A6D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ACA9F5AB-6715-4740-AC44-20BC786D798E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACA9F5AB-6715-4740-AC44-20BC786D798E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACA9F5AB-6715-4740-AC44-20BC786D798E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACA9F5AB-6715-4740-AC44-20BC786D798E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{70A240AD-24D8-40EF-8B6D-6E3E08746FD9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70A240AD-24D8-40EF-8B6D-6E3E08746FD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70A240AD-24D8-40EF-8B6D-6E3E08746FD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70A240AD-24D8-40EF-8B6D-6E3E08746FD9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

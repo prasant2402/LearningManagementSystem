@@ -1,0 +1,84 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Manage Courses</h2>
+@Scripts.Render("~/bundles/CourseEntity")
+<div ng-controller="coursesController">
+    <div class="col-lg-10">
+        <div class="pull-left">
+            <button class="btn btn-sm btn-default" ng-click="open_fancybox()">
+                <i class="fa fa-plus"></i> Add Course
+            </button>
+        </div>
+        <div class="pull-right">
+            <input type="text" class="form-control input-sm pull-right" ng-model="searchText" placeholder="Search Courses" style="width:400px" />
+        </div>
+    </div>
+    <div class="col-lg-10" style="margin-top:10px">
+        <ul class="list-group">
+            <li class="list-group-item list-group-item-heading list-group-item-info">
+                <strong>Course Name</strong>
+            </li>
+            <li ng-repeat="course in Courses | filter: {Name: searchText}" class="list-group-item morris-hover">
+                <a href="~/course/details/{{course._id}}">{{course.Name}}</a>
+                <span class="pull-right">
+                    <a href="~/course/details/{{course._id}}"><i class="fa fa-folder-open fa-fw"></i></a>
+                </span>
+                <span class="pull-right">
+                    <a href="#" ng-click="showDescription(course.Description)"><i class="fa fa-info-circle fa-fw"></i></a>
+                </span>
+                <span class="pull-right">
+                    <a href="#" ng-click="delete_fancybox(course._id)"><i class="fa fa-trash-o fa-fw"></i></a>
+                </span>
+            </li>
+        </ul>
+    </div>
+    <div id="divCreateNewCourse" style="display:none" fancybox>
+        <div class="panel panel-success">
+            <div class="panel-heading">
+                <span class="fa fa-3x">Create New Course</span>
+            </div>
+            <div class="panel-body">
+                <div class="form-group">
+                    <label for="ModuleName">Module</label>
+                    <select class="form-control" id="ModuleName" ng-model="Module" ng-options="module.Name for module in Modules track by module._id"></select>
+                </div>
+                <div class="form-group">
+                    <label for="CourseName">Course Name</label>
+                    <input type="text" class="form-control" id="CourseName" placeholder="Course Name" ng-model="Name">
+                </div>
+                <div class="form-group">
+                    <label for="Description">Password</label>
+                    <textarea class="form-control" id="Description" ng-model="Description" rows="5"></textarea>
+                </div>
+            </div>
+            <div class="panel-footer">
+                <button type="button" class="btn btn-success" ng-click="saveCourse()">
+                    <i class="fa fa-plus"></i> Add Course
+                </button>
+            </div>
+        </div>
+    </div>
+    <div id="divDeleteCourse" style="display:none" deletefancybox>
+        <div class="panel panel-success">
+            <div class="panel-heading">
+                <span class="fa fa-3x">Delete Course</span>
+            </div>
+            <div class="panel-body">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-question-circle fa-stack"></i>
+                </span>
+                <div>
+                    The Selected Course and all of its related courses will be deleted!<br />
+                    Are you Sure?
+                </div>
+            </div>
+            <div class="panel-footer text-right">
+                <button type="button" class="btn btn-danger" ng-click="deleteCourse()">
+                    <i class="fa fa-plus"></i> Delete Course
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

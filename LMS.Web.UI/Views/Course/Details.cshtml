@@ -1,0 +1,98 @@
+﻿@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Course Details</h2>
+@Scripts.Render("~/bundles/CourseEntity")
+<div ng-controller="coursesController">
+    <div class="row col-lg-4">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                Manage Users
+            </div>
+            <div class="panel-body">
+                <div class="list-group">
+                    <a class="list-group-item" href="#" ng-click="loadFunctions('users')">
+                        <i class="fa fa-users"></i> Align Users
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                Manage Course Details
+            </div>
+            <div class="panel-body">
+                <div class="list-group">
+                    <a class="list-group-item" href="#" ng-click="loadFunctions('documents')">
+                        <i class="fa fa-file-o"></i> Manage Attachments
+                    </a>
+                    <a class="list-group-item" href="#" ng-click="loadFunctions('audios')">
+                        <i class="fa fa-file-audio-o"></i> Manage Audio Files
+                    </a>
+                    <a class="list-group-item" href="#" ng-click="loadFunctions('videos')">
+                        <i class="fa fa-file-video-o"></i> Manage Videos
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-8" ng-show="selectedFunction == 'users'">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <strong>Manage Users</strong>
+            </div>
+            <div class="panel-body">
+                <div class="list-group">
+                    <a href="#" class="list-group-item morris-hover">
+                        <i class="fa fa-file-video-o"></i>&nbsp;User Name1
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-8" ng-show="selectedFunction == 'videos'">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <strong>Manage Videos</strong>
+            </div>
+            <div class="panel-body">
+                <div class="list-group">
+                    <a href="#" class="list-group-item morris-hover" ng-click="loadVideos($scope.videoUrl)">
+                        <i class="fa fa-file-video-o"></i>&nbsp;Show Video
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-8" ng-show="selectedFunction == 'audios'">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <strong>Manage Audios</strong>
+            </div>
+            <div class="panel-body">
+                <div class="list-group">
+                    <a href="#" class="list-group-item morris-hover">
+                        <i class="fa fa-file-video-o"></i>&nbsp;Play Audio
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-8" ng-show="selectedFunction == 'documents'">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <strong>Manage Documents</strong>
+            </div>
+            <div class="panel-body">
+                <div class="list-group">
+                    <a href="#" class="list-group-item morris-hover" title="Show any document">
+                        <i class="fa fa-file-video-o"></i>&nbsp;Show Document
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

@@ -1,0 +1,82 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+@Scripts.Render("~/bundles/ModuleEntity")
+<div class="fa fa-2x text-center">
+    <h2>Manage Modules</h2>
+</div>
+<div ng-controller="modulesController">
+    <div class="col-lg-8">
+        <div class="pull-left">
+            <button class="btn" ng-click="open_fancybox()">
+                <i class="fa fa-plus"></i> Add Module
+            </button>
+        </div>
+        <div class="pull-right">
+            <input type="text" class="form-control input-sm pull-right" placeholder="Search Modules" style="width:300px" ng-model="searchText" />
+        </div>
+    </div>
+    <div class="col-lg-8" style="margin-top:10px">
+        <ul class="list-group">
+            <li class="list-group-item list-group-item-heading list-group-item-info">
+                <strong>Module Name</strong>
+            </li>
+            <li ng-repeat="module in Modules | filter:{Name: searchText}" class="list-group-item morris-hover">
+                {{module.Name}}
+                <span class="pull-right">
+                    <a href="~/course/index/{{module._id}}"><i class="fa fa-book fa-fw"></i></a>
+                </span>
+                <span class="pull-right">
+                    <a href="#" ng-click="showDescription(module.Description)"><i class="fa fa-info-circle fa-fw"></i></a>
+                </span>
+                <span class="pull-right">
+                    <a href="#" ng-click="delete_fancybox(module._id)"><i class="fa fa-trash-o fa-fw"></i></a>
+                </span>
+            </li>
+        </ul>
+    </div>
+    <div id="divCreateNewModule" style="display:none" fancybox>
+        <div class="panel panel-success">
+            <div class="panel-heading">
+                <span class="fa fa-3x">Create New Module</span>
+            </div>
+            <div class="panel-body">
+                <div class="form-group">
+                    <label for="moduleName">Module Name</label>
+                    <input type="text" class="form-control" id="moduleName" placeholder="Module Name" ng-model="Name">
+                </div>
+                <div class="form-group">
+                    <label for="Description">Password</label>
+                    <textarea class="form-control" id="Description" ng-model="Description" rows="5"></textarea>
+                </div>
+            </div>
+            <div class="panel-footer">
+                <button type="button" class="btn btn-success" ng-click="saveModule()">
+                    <i class="fa fa-plus"></i> Add Module
+                </button>
+            </div>
+        </div>
+    </div>
+    <div id="divDeleteModule" style="display:none" deletefancybox>
+        <div class="panel panel-success">
+            <div class="panel-heading">
+                <span class="fa fa-3x">Delete Module</span>
+            </div>
+            <div class="panel-body">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-question-circle fa-stack"></i>
+                </span>
+                <div>
+                    The Selected Module and all of its related courses will be deleted!<br />
+                    Are you Sure?
+                </div>
+            </div>
+            <div class="panel-footer text-right">
+                <button type="button" class="btn btn-danger" ng-click="deleteModule()">
+                    <i class="fa fa-plus"></i> Delete Module
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
