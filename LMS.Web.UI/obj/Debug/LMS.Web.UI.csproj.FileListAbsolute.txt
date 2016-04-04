@@ -102,5 +102,3 @@ C:\Work\LearningManagementSystem\LMS.Web.UI\bin\MongoDB.Driver.Core.dll
 C:\Work\LearningManagementSystem\LMS.Web.UI\bin\MongoDB.Driver.dll
 C:\Work\LearningManagementSystem\LMS.Web.UI\bin\MongoDB.Bson.xml
 C:\Work\LearningManagementSystem\LMS.Web.UI\bin\MongoDB.Driver.xml
-C:\Work\LearningManagementSystem\LMS.Web.UI\bin\LMS.Data.BL.pdb
-C:\Work\LearningManagementSystem\LMS.Web.UI\bin\LMS.Data.Repository.pdb
